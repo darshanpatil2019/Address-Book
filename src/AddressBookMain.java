@@ -24,9 +24,12 @@ public class AddressBookMain {
 
             switch (choice) {
                 case 1:
+                    // Adding New Contact Details
                     addresssBook.addNewContact();
                     break;
                 case 2:
+                    //Edit Contact Details
+                    addresssBook.editContact();
                     break;
                 case 3:
                     break;
@@ -40,8 +43,8 @@ public class AddressBookMain {
                     System.out.println("Please select the operation between 1 to 5 only");
                     break;
             }
-        }while (choice !=5);
-            }
-        }
+        } while (choice != 5);
+    }
+}
 
 
