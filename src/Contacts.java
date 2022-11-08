@@ -69,11 +69,11 @@ public class Contacts {
         this.phoneNo = phoneNo;
     }
 
-    public String geteMailID() {
+    public String getEMailID() {
         return eMailID;
     }
 
-    public void seteMailID(String eMailID) {
+    public void setEMailID(String eMailID) {
         this.eMailID = eMailID;
     }
 }
