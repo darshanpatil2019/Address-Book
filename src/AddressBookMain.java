@@ -32,8 +32,11 @@ public class AddressBookMain {
                     addresssBook.editContact();
                     break;
                 case 3:
+                    //Delete Contact Details
+                    addresssBook.deleteContact();
                     break;
                 case 4:
+                    //Display contact details
                     addresssBook.displayContact();
                     break;
                 case 5:
