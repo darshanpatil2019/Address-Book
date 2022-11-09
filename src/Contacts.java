@@ -1,6 +1,6 @@
 public class Contacts {
 
-    //  Variable declaration for Contact class
+    //  Variable declaration for Contacts class
 
     private String firstName;
     private String lastName;

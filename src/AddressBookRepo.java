@@ -9,7 +9,7 @@ public class AddressBookRepo {
     public static void addNewAddressBook() {
         System.out.println("Enter the Address Book Name :");
         String addressBookName = sc.next();
-        if (checkAddressBook(addressBookName)) {
+        if (addresssBookMap.containsKey(addressBookName)) {
             System.out.println("Entered AddressBook is Already Available");
         } else {
             AddresssBook addresssBook = new AddresssBook();
@@ -23,20 +23,11 @@ public class AddressBookRepo {
         }
     }
 
-    public static boolean checkAddressBook(String addressBookName) {
-        for (String key : addresssBookMap.keySet()) {
-            if (addressBookName.equalsIgnoreCase(key)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public static void selectAddressBook() {
         displayAddressBook();
         System.out.println("Enter the Address Book Name :");
         String addressBookName = sc.next();
-        if (checkAddressBook(addressBookName)) {
+        if (addresssBookMap.containsKey(addressBookName)) {
             addresssBookMap.get(addressBookName).contactOptions(addresssBookMap.get(addressBookName));
         } else {
             System.out.println("Entered Address Book Name is Invalid");
@@ -47,10 +38,9 @@ public class AddressBookRepo {
         displayAddressBook();
         System.out.println("Enter the Address Book Name :");
         String addressBookName = sc.next();
-        if (checkAddressBook(addressBookName)) {
-//            System.out.println("Enter the new Name for AddressBook :");
-//            String newName = sc.next();
-//            addresssBookMap;
+        if (addresssBookMap.containsKey(addressBookName)) {
+            System.out.println("Enter the new Name for AddressBook :");
+            String newName = sc.next();
         } else {
             System.out.println("Entered Address Book Name is Invalid");
         }
@@ -60,7 +50,7 @@ public class AddressBookRepo {
         displayAddressBook();
         System.out.println("Enter the Address Book Name :");
         String addressBookName = sc.next();
-        if (checkAddressBook(addressBookName)) {
+        if (addresssBookMap.containsKey(addressBookName)) {
             addresssBookMap.remove(addressBookName);
             System.out.println("Address Book is Deleted.");
         } else {
