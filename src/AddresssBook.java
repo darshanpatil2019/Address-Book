@@ -62,10 +62,9 @@ public class AddresssBook {
         //Check if the given User with First Name
         boolean isAvailable = false;
         for (Contacts contact : contactList) {
-
             if (!firstName.equalsIgnoreCase(contacts.getFirstName())) {
-                System.out.println("The Entered Contact Name is not Available in Address Book");
-            } else {
+                isAvailable = true;
+
                 System.out.println("Enter the Last Name :");
                 contacts.setLastName(sc.next());
                 System.out.println("Enter the Address :");
